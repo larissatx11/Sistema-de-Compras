@@ -1,0 +1,313 @@
+
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.4;
+  background-color: #FBF7E9;
+  color: #333;
+  padding: 15px;
+}
+
+header {
+  background-color: #EF959C;
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: center; /* Distribui os elementos igualmente ao longo do eixo horizontal */
+  align-items: center;
+  border-radius: 5px;
+}
+
+/* Estilos para a imagem centralizada */
+.center-image {
+  display: block; /* Garante que a imagem será tratada como um bloco */
+  margin: 0 auto; /* Define margem automática para centralizar horizontalmente */
+  max-width: 100%; /* Garante que a imagem não ultrapasse a largura máxima da viewport */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-top: 20px; /* Adiciona espaço acima da imagem */
+  height: 150px;
+  width: 130px;
+}
+
+/* Estilos para o formulário de criação de post */
+form {
+  display: flex; /* Usa flexbox para alinhar o conteúdo */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  margin-top: 10px;
+}
+
+form input {
+  max-width: 200px;
+  width: 100%;
+  height: 20px;
+  margin-right: 10px;
+  padding: 4px;
+}
+
+form select {
+  max-width: 200px;
+  width: 100%;
+  height: 32px;
+  margin-right: 10px;
+  padding: 4px;
+}
+
+/* Estilo para o checkbox */
+.checkbox {
+  width: 20px; /* Largura do checkbox */
+  margin-bottom: 5px;
+  margin-right: 15px;
+}
+
+/* Estilos para a lista de componentes */
+.listasDeComponentes {
+  display: flex; /* Usa flexbox para alinhar o conteúdo */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  flex-direction: column; 
+}
+
+.listasDeComponentes li {
+  display: flex; /* Utiliza flexbox */
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Alinha os itens ao topo */
+  align-items: center; /* Centraliza verticalmente os itens */
+  width: 470px; /* Define a largura do item li */
+  margin-left: 10px; /* Adiciona um espaço extra na esquerda para centralizar os itens */
+  margin-bottom: 10px;
+}
+
+/* Estilos para o conteúdo do componentes */
+.listasDeComponentes li span {
+  flex-grow: 1; /* Permite que o texto ocupe o espaço restante */
+  font-size: 17px;
+  max-width: calc(100% - 200px); /* Limitando a largura do texto */
+  overflow-wrap: break-word;  /*Quebra de palavra para quebrar o texto quando ele exceder o contêiner */
+}
+
+/* Estilos para o botão de editar */
+.btn-edit, .btn-delete, .btn-add {
+  background-color: transparent; /* Define o fundo como transparente para que a imagem seja visível */
+  border: none; /* Remove a borda */
+  cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+  margin-left: 5px; /* Adiciona um pequeno espaço entre os botões e o texto */
+}
+
+/* Estilos para a imagem dentro do botão de editar */
+.edit-img, .delete-img, .adicionar-img {
+  border-radius: 100%; /* Borda arredondada */
+  width: 35px; /* Largura da imagem */
+  height: auto; /* Altura automática para manter a proporção */
+  object-fit: cover; /* Mantém a proporção da imagem e corta o excesso */
+  margin-left: 0px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
+}
+
+/* Estilos para o menu */
+.menu {
+  margin-left: 10px;
+  margin-top: 15px;
+  border-radius: 5px; 
+  position: fixed;
+  top: 0;
+  left: -300px; /* Inicia o menu fora da tela */
+  width: 200px; /* Largura do menu */
+  height: 100%; /* Altura do menu */
+  background-color: #EF959C; /* Cor de fundo do menu */
+  padding-top: 100px; /* Espaço para o ícone do menu */
+  transition: left 0.3s ease; /* Adiciona uma transição suave para o movimento do menu */
+}
+
+.menu.open {
+  left: 0; /* Mostra o menu */
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  margin-left: 3px;
+}
+
+.menu-link { 
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  display: block;
+  cursor: pointer; 
+  transition: background-color 0.3s ease;
+}
+
+.menu-link:hover {
+  background-color: #f7a8a8;
+  font-weight: bold; /* Adicionando fonte em negrito */
+}
+
+.menu-icon img {
+  width: 45px;
+  height: 45px;
+  position: fixed;
+  top: 10px;
+  margin-left: 20px;
+  margin-top: 25px;
+  cursor: pointer; /* Altera o cursor para indicar que é clicável */
+  transition: left 0.3s ease; /* Adiciona uma transição suave para o movimento da imagem do menu */
+}
+
+.editando {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: 40px;
+}
+
+.campo-editar {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: auto;
+}
+
+.botoes-container{
+  margin-top: 30px;
+}
+
+.inputs-container select{
+  width: 200px; /* Defina o tamanho desejado para o select */
+  max-width: 200px; /* Largura máxima do menu suspenso */
+  height: 30px; 
+}
+
+/* Estilos para largura de tela maior que 600px */
+@media only screen and (min-width: 600px) {
+  .listasDeComponentes li {
+      max-width: 600px; /* Aumenta a largura máxima para telas maiores */
+  }
+}
+
+/* Estilos para largura de tela menor que 600px */
+@media only screen and (max-width: 600px) {
+  /* Estilos para o formulário de criação de post */
+  form {
+    display: flex; /* Usa flexbox para alinhar o conteúdo */
+    align-items:center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    margin-top: 10px;
+    flex-direction: column; 
+  }
+
+  form input {
+    max-width: 230px;
+    width: 100%;
+    height: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 4px;
+  }
+
+  form select {
+    max-width: 240px;
+    width: 100%;
+    height: 32px;
+    margin-right: 10px;
+    padding: 4px;
+    margin-bottom: 5px;
+  }
+
+  .listasDeComponentes li {
+      display: flex; /* Utiliza flexbox */
+      flex-wrap: wrap; /* Permite que os itens da lista sejam enrolados */
+      justify-content: flex-start; /* Alinha os itens à esquerda */
+      align-items: center; /* Centraliza verticalmente os itens */
+      width: calc(100% - 5px); /* Define a largura do item li */
+      margin: 10px; /* Adiciona margem ao redor do item li */
+  }
+
+  .listasDeComponentes li span {
+      margin-right: auto; /* Move o texto para a esquerda */
+      margin-left: -5px;
+      margin-bottom: 10px; /* Adiciona margem inferior ao texto */
+      max-width: calc(100% - 90px); /* Limitando a largura do texto */
+  }
+
+  /* Estilo para o checkbox */
+  .checkbox {
+    width: 20px; /* Largura do checkbox */
+    margin-bottom: 5px;
+    margin-right: 15px;
+    margin-left: -45px;
+  }
+
+  .editando {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: -15px;
+  }
+
+  .select-produto select{
+    width: 140px; /* Defina o tamanho desejado para o select */
+    height: 30px; 
+    margin-top: 20px;
+  }
+
+  .btn-edit {
+      margin-left: auto; /* Move o botão de editar para a direita */
+      margin-top: 5px; /* Adiciona margem superior ao botão de editar */
+    }
+
+  .btn-delete {
+      margin-top: 5px; /* Adiciona margem superior ao botão de deletar */
+  }
+
+  .btn-add{
+    color: #fff;
+    background-color: #EF959C;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer; 
+  }
+
+  .btn-add::after {
+    justify-content: center; 
+    content: "Adicionar"; /* Adiciona o texto "Adicionar" após o botão */
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .adicionar-img{
+    display: none;
+  }
+
+  .menu-icon img {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 10px;
+    margin-left: 0;
+    margin-top: 12px;
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+    transition: left 0.3s ease; /* Adiciona uma transição suave para o movimento da imagem do menu */
+  }
+
+  h1{
+    font-size: 20px;
+  }
+
+}

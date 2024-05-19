@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Sistema-de-Compras/static/css/main.18366172.css",
-    "main.js": "/Sistema-de-Compras/static/js/main.c30e006b.js",
+    "main.js": "/Sistema-de-Compras/static/js/main.085b8990.js",
     "static/js/453.d41bbcff.chunk.js": "/Sistema-de-Compras/static/js/453.d41bbcff.chunk.js",
     "index.html": "/Sistema-de-Compras/index.html",
     "main.18366172.css.map": "/Sistema-de-Compras/static/css/main.18366172.css.map",
-    "main.c30e006b.js.map": "/Sistema-de-Compras/static/js/main.c30e006b.js.map",
+    "main.085b8990.js.map": "/Sistema-de-Compras/static/js/main.085b8990.js.map",
     "453.d41bbcff.chunk.js.map": "/Sistema-de-Compras/static/js/453.d41bbcff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.18366172.css",
-    "static/js/main.c30e006b.js"
+    "static/js/main.085b8990.js"
   ]
 }

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Sistema-de-Compras/static/css/main.18366172.css",
+    "main.js": "/Sistema-de-Compras/static/js/main.fe6de794.js",
+    "static/js/453.d41bbcff.chunk.js": "/Sistema-de-Compras/static/js/453.d41bbcff.chunk.js",
+    "index.html": "/Sistema-de-Compras/index.html",
+    "main.18366172.css.map": "/Sistema-de-Compras/static/css/main.18366172.css.map",
+    "main.fe6de794.js.map": "/Sistema-de-Compras/static/js/main.fe6de794.js.map",
+    "453.d41bbcff.chunk.js.map": "/Sistema-de-Compras/static/js/453.d41bbcff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.18366172.css",
+    "static/js/main.fe6de794.js"
+  ]
+}

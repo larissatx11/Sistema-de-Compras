@@ -15,7 +15,7 @@ import Home from '../components/Home/Home'
 
 function RoutesComponents() {
   return (
-    <Router>
+    <Router basename={"/Sistema-de-Compras"}>
       <Layout>
         <Routes>
           <Route path="/" element={<PaginaInicial />} index />

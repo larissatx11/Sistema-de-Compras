@@ -28,7 +28,7 @@ function cadastrarNovoUsuario(usuario) {
     sessionStorage.setItem('usuarios', JSON.stringify(usuarios));
 
     // Retornar o ID do novo usuário
-    window.location.href = '/login';
+    window.location.href = '/Sistema-de-Compras/login';
     return id;
   }
 
@@ -74,7 +74,7 @@ function CadastroUsuario() {
           </div> 
             <button className="btn">Cadastrar</button>
 
-            <h4>Já possui uma conta? <a href="/login">clique aqui</a></h4>
+            <h4>Já possui uma conta? <a href="/Sistema-de-Compras/login">clique aqui</a></h4>
         </form>
       </div>
     </div>

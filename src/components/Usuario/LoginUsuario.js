@@ -6,7 +6,7 @@ export function logout() {
   // Limpar dados de autenticação (por exemplo, ID de usuário, token de sessão, etc.)
   sessionStorage.removeItem('usuarioLogado');
   // Redirecionar para a página de login 
-  window.location.href = '/'; 
+  window.location.href = '/Sistema-de-Compras/'; 
   }
 }
 
@@ -24,7 +24,7 @@ export function excluirConta() {
         // Limpar os dados de autenticação do usuário
         sessionStorage.removeItem('usuarioLogado');
         // Redirecionar para a página de login
-        window.location.href = '/';
+        window.location.href = '/Sistema-de-Compras/';
     }
 }
 
@@ -68,7 +68,7 @@ function realizarLogin(email, senha) {
              setSenha('');
  
              // Aqui você pode redirecionar o usuário para outra página, por exemplo
-              window.location.href = '/home';
+              window.location.href = '/Sistema-de-Compras/home';
          } else {
              // Mostrar um alerta informando que o usuário não foi encontrado ou a senha está incorreta
              alert('Usuário não encontrado ou senha incorreta');
@@ -95,7 +95,7 @@ function realizarLogin(email, senha) {
             <input type="password" value={senha} onChange={(e) => setSenha(e.target.value)} required />
           </div>
           <button className="btn">Entrar</button>
-          <h4>Não possui uma conta? <a href="/cadastro">clique aqui</a></h4>
+          <h4>Não possui uma conta? <a href="/Sistema-de-Compras/cadastro">clique aqui</a></h4>
         </form>
         </div>
       </div>

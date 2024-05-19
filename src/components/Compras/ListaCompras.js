@@ -43,16 +43,14 @@ function ListaDeComponentes() {
                         {produtosSelecionadosUsuarioAtual.map(post => (
                             <li key={post.id}>
                                 <input
-                                    type="checkbox"
-                                    id={`checkbox-${post.id}`}
+                                    type="checkbox"                                  
                                     className="checkbox"
-                                    aria-label="Checkbox de marcação"
                                 />
                                 <span>
                                     <>
-                                        Produto: {post.nome} <br />
-                                        Preço: R$ {post.preco.toFixed(2)} <br />
-                                        Loja: {buscarNomeLoja(post.lojaId)}
+                                    <span className="label">Produto: </span>{post.nome} <br />
+                                    <span className="label">Preço: </span>R$ {post.preco.toFixed(2)} <br />
+                                    <span className="label">Loja: </span>{buscarNomeLoja(post.lojaId)}
                                     </>
                                 </span>
 

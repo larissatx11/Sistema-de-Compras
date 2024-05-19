@@ -20,7 +20,7 @@ function ProdutoList() {
     return (
         <div>
             <header>
-                <h1>Lista de Produtos</h1>
+                <h1>Produtos</h1>
             </header>
             {usuarioLogado ? (
                 <div>
@@ -52,16 +52,14 @@ function ProdutoList() {
                             <li key={produto.id}>
                                 <input
                                     type="checkbox"
-                                    id="checkboxIdProduto"
                                     className="checkbox"
-                                    aria-label="Checkbox de marcação 1"
                                 />
                                 <span> 
-                                <>
-                                    Produto: {produto.nome} <br />
-                                    Preço: R$ {produto.preco.toFixed(2)} <br />
-                                    Loja: {buscarNomeLoja(produto.lojaId, lojas)}
-                                </>
+                                    <>
+                                    <span className="label">Produto: </span> {produto.nome} <br />
+                                    <span className="label">Preço:</span> R$  {produto.preco.toFixed(2)} <br />
+                                    <span className="label">Loja: </span> {buscarNomeLoja(produto.lojaId, lojas)}
+                                    </>
                                 </span>
                                 {produto.editando ? (
                                     <div className="editando">

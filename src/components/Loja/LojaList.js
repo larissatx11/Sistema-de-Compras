@@ -35,15 +35,13 @@ function LojaList() {
                             <li key={loja.id}>
                                 <input
                                     type="checkbox"
-                                    id="checkboxId"
                                     className="checkbox"
-                                    aria-label="Checkbox de marcação"
                                 />
                                 <span>
-                                <>
-                                    Loja: {loja.nome} <br />
-                                    Endereço: {loja.endereco} <br />
-                                </>
+                                    <>
+                                    <span className="label">Loja:</span> {loja.nome} <br />
+                                    <span className="label">Endereço:</span> {loja.endereco} <br />
+                                    </>
                                 </span>
                                 {loja.editando ? (
                                     <div className="editando">

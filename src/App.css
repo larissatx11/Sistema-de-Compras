@@ -58,6 +58,11 @@ form select {
   margin-right: 15px;
 }
 
+.label {
+  font-weight: bold;
+  color: #333; /* Cor mais escura */
+}
+
 /* Estilos para a lista de componentes */
 .listasDeComponentes {
   display: flex; /* Usa flexbox para alinhar o conteúdo */
@@ -189,6 +194,19 @@ form select {
   width: 200px; /* Defina o tamanho desejado para o select */
   max-width: 200px; /* Largura máxima do menu suspenso */
   height: 30px; 
+}
+
+.login-message {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px 20px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  z-index: 1000;
 }
 
 /* Estilos para largura de tela maior que 600px */

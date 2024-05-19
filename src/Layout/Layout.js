@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { verificarUsuarioLogado } from './components/Usuario/CadastroUsuario'; // Importe a função de verificação de usuário logado
-import { excluirConta, logout } from './components/Usuario/LoginUsuario';
+import { Link, useLocation } from 'react-router-dom';
+import { verificarUsuarioLogado } from '../components/Usuario/CadastroUsuario'; // Importe a função de verificação de usuário logado
+import { excluirConta, logout } from '../components/Usuario/LoginUsuario';
 
 function Layout({ children }) {
   const [menuWidth, setMenuWidth] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
   const [menuIconPosition, setMenuIconPosition] = useState(0);
+  const [showLoginMessage, setShowLoginMessage] = useState(false);
   const usuarioLogado = verificarUsuarioLogado(); // Verifica se há usuário logado
+
+  const location = useLocation();
 
   useEffect(() => {
     const menu = document.querySelector('.menu');
@@ -18,8 +21,13 @@ function Layout({ children }) {
   }, []);
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-    setMenuIconPosition(menuOpen ? 0 : menuWidth);
+    if (!usuarioLogado && (location.pathname === "/" || location.pathname === "/login" || location.pathname === "/cadastro")) {
+      setShowLoginMessage(true);
+      setTimeout(() => setShowLoginMessage(false), 3000); // Oculta a mensagem após 3 segundos
+    } else {
+      setMenuOpen(!menuOpen);
+      setMenuIconPosition(menuOpen ? 0 : menuWidth);
+    }
   };
 
   const handleClickOutside = (event) => {
@@ -62,6 +70,8 @@ function Layout({ children }) {
       <div className="menu-icon" style={{ marginLeft: menuIconPosition }} onClick={toggleMenu}>
         <img src="Site_Lista/menu.png" alt="Ícone de menu" />
       </div>
+
+      {showLoginMessage && <div className="login-message">Faça Login para ativar o menu</div>}
 
       {children}
     </div>
